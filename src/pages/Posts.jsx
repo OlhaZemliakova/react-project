@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-import PostService from "./API/PostService";
-import PostFilter from "./components/PostFilter";
-import PostForm from "./components/PostForm";
-import PostList from "./components/PostList";
-import MyButton from "./components/UI/button/MyButton";
-import Loader from "./components/UI/loader/Loader";
-import MyModal from "./components/UI/myModal/MyModal";
-import "./styles/App.css";
-import { usePosts } from "./hooks/usePosts";
-import { getPageCount, getPagesArray } from "./utils/pages";
+import PostService from "../API/PostService";
+import PostFilter from "../components/PostFilter";
+import PostForm from "../components/PostForm";
+import PostList from "../components/PostList";
+import MyButton from "../components/UI/button/MyButton";
+import Loader from "../components/UI/loader/Loader";
+import MyModal from "../components/UI/myModal/MyModal";
+import { usePosts } from "../hooks/usePosts";
+import { getPageCount, getPagesArray } from "../utils/pages";
 
-function App() {
+function Posts() {
   const [posts, setPosts] = useState([]);
 
   const [filter, setFilter] = useState({ sort: "", query: "" });
@@ -92,4 +91,4 @@ function App() {
   );
 }
 
-export default App;
+export default Posts;
